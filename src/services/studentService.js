@@ -12,6 +12,17 @@ const index = async () => {
 
 }
 
+const deleteStudent = async (id) => {
+    try {
+        await fetch(`${BASE_URL}/students/${id}`, {
+            method: 'DELETE'
+        })
+    } catch (error) {
+        console.log(error);
+    }
+}
+
 export {
     index,
+    deleteStudent,
 }
